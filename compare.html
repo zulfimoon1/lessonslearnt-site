@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compare LessonsLearnt – How We're Different</title>
+<title>Compare Student Wellbeing Platforms – LessonsLearnt vs Alternatives</title>
 <meta name="description" content="How LessonsLearnt compares to traditional surveys, manual monitoring, behaviour platforms, and generic analytics for student wellbeing in European schools.">
 <link rel="canonical" href="https://lessonslearnt.eu/compare">
 <meta name="theme-color" content="#1a9e72">
-<meta property="og:title" content="Compare LessonsLearnt – How We're Different">
-<meta property="og:description" content="How LessonsLearnt compares to traditional surveys, manual monitoring, behaviour platforms, and generic analytics for student wellbeing in European schools.">
+<meta property="og:title" content="About LessonsLearnt – Student Wellbeing Platform from Kaunas">
+<meta property="og:description" content="LessonsLearnt was founded in Kaunas, Lithuania, to give every student a voice and every teacher the insight to respond. Built for European schools.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://lessonslearnt.eu/compare">
+<meta property="og:url" content="https://lessonslearnt.eu/about">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
   --teal:#1a9e72; --teal-dark:#0f6e56; --teal-light:#e1f5ee; --teal-band:#1f9d6f;
@@ -22,7 +22,7 @@
   --ink:#1a1a18; --gray:#6b6a64; --line:#e4e2da; --orange:#e8833a;
   --max:1140px; --r:12px; --r-lg:18px;
   --serif:'Instrument Serif',Georgia,serif;
-  --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -251,6 +251,28 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
   .comp-table{font-size:.82rem}
   .comp-table th,.comp-table td{padding:10px 8px}
 }
+
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:920px;margin:0 auto 64px}
+.cmp-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px}
+.cmp-icon{width:46px;height:46px;background:var(--teal-light);color:var(--teal-dark);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+.cmp-card h3{font-size:1.3rem;margin-bottom:4px}
+.cmp-sub{color:var(--teal-dark);font-weight:600;font-size:.82rem;margin-bottom:12px}
+.cmp-desc{color:var(--gray);font-size:.9rem;line-height:1.5;margin-bottom:16px}
+.cmp-hl{list-style:none;margin-bottom:16px}
+.cmp-hl li{font-size:.88rem;color:#33332f;display:flex;gap:8px;padding:4px 0}
+.cmp-hl .ck{color:var(--teal)}
+.cmp-verdict{background:var(--teal-light);border-radius:9px;padding:11px 14px;font-size:.82rem;color:#2a4a40;font-weight:500;margin-bottom:16px}
+.cmp-link{color:var(--teal);font-weight:600;font-size:.9rem}
+.matrix{width:100%;border-collapse:collapse;max-width:760px;margin:0 auto;font-size:.92rem}
+.matrix th{background:var(--teal);color:#fff;padding:14px;font-weight:600;text-align:center}
+.matrix th:first-child{text-align:left;border-radius:8px 0 0 0}
+.matrix th:last-child{border-radius:0 8px 0 0}
+.matrix td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:center}
+.matrix td:first-child{text-align:left;font-weight:500}
+.matrix .yes{color:var(--teal);font-weight:700}
+.matrix .no{color:#c0392b}
+.matrix .partial{color:var(--orange);font-weight:700}
+@media(max-width:760px){.cmp-grid{grid-template-columns:1fr}.matrix{font-size:.8rem}.matrix td,.matrix th{padding:9px 6px}}
 </style>
 </head>
 <body>
@@ -274,25 +296,61 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
     <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
   </div>
 </header>
-
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow">Compare</span>
-    <h1 class="serif">How LessonsLearnt compares</h1>
-    <p class="lead">Schools manage wellbeing and feedback in many ways today — surveys, manual monitoring, behaviour platforms, generic analytics. Here's how a connected data architecture differs.</p>
+    <span class="eyebrow">Honest comparisons</span>
+    <h1 class="serif">How does LessonsLearnt compare?</h1>
+    <p class="lead">We believe in transparency. See how our AI-powered student wellbeing platform compares to traditional approaches, and help your school make an informed decision.</p>
   </div>
 </section>
 <section class="section">
   <div class="container">
-    <div class="grid-2" style="grid-template-columns:repeat(2,1fr);">
-      <a href="/compare/traditional-surveys" class="card"><h3>vs Traditional surveys</h3><p>Why an annual or termly survey is too slow and too blunt to change outcomes.</p></a>
-      <a href="/compare/manual-monitoring" class="card"><h3>vs Manual monitoring</h3><p>Why spreadsheets and staff intuition miss the students who hide their struggles.</p></a>
-      <a href="/compare/behavior-platforms" class="card"><h3>vs Behaviour platforms</h3><p>Why tracking behaviour isn't the same as understanding wellbeing.</p></a>
-      <a href="/compare/generic-analytics" class="card"><h3>vs Generic analytics</h3><p>Why education needs purpose-built data architecture, not a general BI tool.</p></a>
+    <div class="cmp-grid"><div class="cmp-card">
+  <div class="cmp-icon">&#128172;</div>
+  <h3 class="serif">Lessons Learnt vs Traditional Surveys</h3>
+  <div class="cmp-sub">Real-time AI vs Periodic Paper Forms</div>
+  <p class="cmp-desc">See how AI-powered continuous feedback outperforms traditional survey methods for student wellbeing monitoring.</p>
+  <ul class="cmp-hl"><li><span class="ck">&#10003;</span> Real-time vs monthly data collection</li><li><span class="ck">&#10003;</span> Voice input vs written-only responses</li><li><span class="ck">&#10003;</span> AI distress detection vs manual review</li><li><span class="ck">&#10003;</span> 200+ languages vs single language</li></ul>
+  <div class="cmp-verdict">Best for: Schools wanting immediate insights and inclusive feedback collection</div>
+  <a href="/compare/traditional-surveys" class="cmp-link">View full comparison &#8594;</a>
+</div><div class="cmp-card">
+  <div class="cmp-icon">&#128101;</div>
+  <h3 class="serif">Lessons Learnt vs Manual Monitoring</h3>
+  <div class="cmp-sub">AI-Assisted vs Counselor-Only Approaches</div>
+  <p class="cmp-desc">Discover how Lessons Learnt complements and enhances the work of school counselors and wellbeing staff.</p>
+  <ul class="cmp-hl"><li><span class="ck">&#10003;</span> Scales to 5000+ students per counselor</li><li><span class="ck">&#10003;</span> Early warning before crisis</li><li><span class="ck">&#10003;</span> Consistent 24/7 availability</li><li><span class="ck">&#10003;</span> Documented intervention tracking</li></ul>
+  <div class="cmp-verdict">Best for: Schools with limited counseling resources needing scalable support</div>
+  <a href="/compare/manual-monitoring" class="cmp-link">View full comparison &#8594;</a>
+</div><div class="cmp-card">
+  <div class="cmp-icon">&#129504;</div>
+  <h3 class="serif">Lessons Learnt vs Behavior Platforms</h3>
+  <div class="cmp-sub">Wellbeing-First vs Behavior Management</div>
+  <p class="cmp-desc">Compare our wellbeing-focused approach with traditional behavior management systems.</p>
+  <ul class="cmp-hl"><li><span class="ck">&#10003;</span> Student voice vs teacher-only input</li><li><span class="ck">&#10003;</span> Emotional health vs behavior points</li><li><span class="ck">&#10003;</span> Preventive vs reactive approach</li><li><span class="ck">&#10003;</span> Confidential feedback vs public tracking</li></ul>
+  <div class="cmp-verdict">Best for: Schools prioritizing mental health over discipline metrics</div>
+  <a href="/compare/behavior-platforms" class="cmp-link">View full comparison &#8594;</a>
+</div><div class="cmp-card">
+  <div class="cmp-icon">&#128202;</div>
+  <h3 class="serif">Lessons Learnt vs Generic Analytics</h3>
+  <div class="cmp-sub">Education-Specific vs General Purpose</div>
+  <p class="cmp-desc">See why purpose-built education analytics outperform generic data tools for student wellbeing.</p>
+  <ul class="cmp-hl"><li><span class="ck">&#10003;</span> Education-specific AI models</li><li><span class="ck">&#10003;</span> Age-appropriate interfaces</li><li><span class="ck">&#10003;</span> GDPR compliance built-in</li><li><span class="ck">&#10003;</span> Teacher-designed workflows</li></ul>
+  <div class="cmp-verdict">Best for: Schools needing specialized education analytics with compliance</div>
+  <a href="/compare/generic-analytics" class="cmp-link">View full comparison &#8594;</a>
+</div></div>
+    <div class="section-title"><h2 class="serif">Quick feature comparison</h2><p class="lead">See at a glance how LessonsLearnt compares to traditional approaches.</p></div>
+    <table class="matrix">
+      <thead><tr><th>Feature</th><th>LessonsLearnt</th><th>Traditional surveys</th><th>Manual monitoring</th></tr></thead>
+      <tbody><tr><td>Real-time feedback collection</td><td class="yes">&#10003;</td><td class="no">&#10007;</td><td class="no">&#10007;</td></tr><tr><td>AI-powered distress detection</td><td class="yes">&#10003;</td><td class="no">&#10007;</td><td class="no">&#10007;</td></tr><tr><td>Multi-language voice input</td><td class="yes">&#10003;</td><td class="no">&#10007;</td><td class="partial">~</td></tr><tr><td>200+ languages supported</td><td class="yes">&#10003;</td><td class="no">&#10007;</td><td class="no">&#10007;</td></tr><tr><td>Automatic alert escalation</td><td class="yes">&#10003;</td><td class="no">&#10007;</td><td class="partial">~</td></tr><tr><td>Anonymous student feedback</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="partial">~</td></tr><tr><td>Longitudinal tracking</td><td class="yes">&#10003;</td><td class="partial">~</td><td class="no">&#10007;</td></tr><tr><td>GDPR compliant</td><td class="yes">&#10003;</td><td class="partial">~</td><td class="partial">~</td></tr><tr><td>Parent portal access</td><td class="yes">&#10003;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr><tr><td>Integration with SIS</td><td class="yes">&#10003;</td><td class="no">&#10007;</td><td class="no">&#10007;</td></tr></tbody>
+    </table>
+    <p style="text-align:center;color:var(--gray);font-size:.82rem;margin-top:14px;">&#10003; Full support &middot; ~ Partial support &middot; &#10007; Not available</p>
+    <div class="inline-cta" style="margin-top:48px;">
+      <h2 class="serif">Ready to see the difference?</h2>
+      <p>Book a personalised demo to see how LessonsLearnt can transform student wellbeing at your school.</p>
+      <a href="/demo" class="btn btn-white">Schedule a demo</a>
     </div>
   </div>
 </section>
-
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -329,6 +387,5 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
     </div>
   </div>
 </footer>
-
 </body>
 </html>

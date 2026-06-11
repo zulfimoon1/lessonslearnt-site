@@ -7,14 +7,14 @@
 <meta name="description" content="Simple school-size pricing. Students always free. Small &euro;100, Medium &euro;250, Large &euro;500 per month. 30-day free trial, no credit card, 20% off annual billing.">
 <link rel="canonical" href="https://lessonslearnt.eu/pricing">
 <meta name="theme-color" content="#1a9e72">
-<meta property="og:title" content="Pricing – LessonsLearnt for European Schools">
-<meta property="og:description" content="Simple school-size pricing. Students always free. Small &euro;100, Medium &euro;250, Large &euro;500 per month. 30-day free trial, no credit card, 20% off annual billing.">
+<meta property="og:title" content="About LessonsLearnt – Student Wellbeing Platform from Kaunas">
+<meta property="og:description" content="LessonsLearnt was founded in Kaunas, Lithuania, to give every student a voice and every teacher the insight to respond. Built for European schools.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://lessonslearnt.eu/pricing">
+<meta property="og:url" content="https://lessonslearnt.eu/about">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
   --teal:#1a9e72; --teal-dark:#0f6e56; --teal-light:#e1f5ee; --teal-band:#1f9d6f;
@@ -22,7 +22,7 @@
   --ink:#1a1a18; --gray:#6b6a64; --line:#e4e2da; --orange:#e8833a;
   --max:1140px; --r:12px; --r-lg:18px;
   --serif:'Instrument Serif',Georgia,serif;
-  --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -251,7 +251,15 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
   .comp-table{font-size:.82rem}
   .comp-table th,.comp-table td{padding:10px 8px}
 }
-</style>
+
+.price-toggle{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:40px}
+.price-toggle span{font-weight:600;font-size:.95rem;color:var(--gray)}
+.price-toggle span.active{color:var(--ink)}
+.toggle-switch{position:relative;width:52px;height:28px;background:var(--teal);border-radius:100px;cursor:pointer;border:none}
+.toggle-knob{position:absolute;top:3px;left:3px;width:22px;height:22px;background:#fff;border-radius:50%;transition:.2s}
+.toggle-switch.annual .toggle-knob{left:27px}
+.save-badge{background:var(--teal-light);color:var(--teal-dark);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.04em}
+.faq-item-static{border-bottom:1px solid var(--line);padding:22px 0;max-width:760px;margin:0 auto}.faq-item-static .faq-q{font-family:var(--serif);font-size:1.3rem;margin-bottom:8px}.faq-item-static .faq-a{color:var(--gray);line-height:1.6}</style>
 </head>
 <body>
 <div class="announce">&#10024; NEW — Google Classroom integration is live. Import your students in one click. &#10024;</div>
@@ -274,73 +282,58 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
     <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
   </div>
 </header>
-
 <section class="page-hero">
   <div class="container">
     <span class="eyebrow">Pricing</span>
     <h1 class="serif">Simple pricing, scaled to your school</h1>
-    <p class="lead">Students are always free. Schools pay by size, with a 30-day free trial and no credit card required. Save 20% with annual billing.</p>
+    <p class="lead">Students are always free. Schools pay by size, with a 30-day free trial and no credit card required.</p>
   </div>
 </section>
-
 <section class="section">
   <div class="container">
+    <div class="price-toggle">
+      <span class="toggle-monthly active">Monthly</span>
+      <button class="toggle-switch" id="billingToggle" aria-label="Toggle annual billing"><span class="toggle-knob"></span></button>
+      <span class="toggle-annual">Annual <span class="save-badge">Save 20%</span></span>
+    </div>
     <div class="price-grid">
       <div class="price-card">
-        <div class="price-name serif">Small</div>
-        <div class="price-amount">&euro;100<span>/month</span></div>
-        <div class="price-desc">Up to 30 students and 5 teachers.</div>
-        <ul class="price-features">
-          <li><span class="ck">&#10003;</span> All 5 roles included</li>
-          <li><span class="ck">&#10003;</span> Wellbeing check-ins &amp; lesson feedback</li>
-          <li><span class="ck">&#10003;</span> Counsellor alerts &amp; secure notes</li>
-          <li><span class="ck">&#10003;</span> 8 languages</li>
-          <li><span class="ck">&#10003;</span> GDPR compliant, EU data</li>
-        </ul>
-        <a href="https://app.lessonslearnt.eu/signup" class="btn btn-secondary" style="width:100%;justify-content:center;">Start free trial</a>
-      </div>
-      <div class="price-card featured">
-        <div class="price-badge">Most popular</div>
-        <div class="price-name serif">Medium</div>
-        <div class="price-amount">&euro;250<span>/month</span></div>
-        <div class="price-desc">Up to 100 students and 10 teachers.</div>
-        <ul class="price-features">
-          <li><span class="ck">&#10003;</span> Everything in Small</li>
-          <li><span class="ck">&#10003;</span> School-wide analytics dashboard</li>
-          <li><span class="ck">&#10003;</span> Year-over-year benchmarking</li>
-          <li><span class="ck">&#10003;</span> Annual reports from live data</li>
-          <li><span class="ck">&#10003;</span> Priority support</li>
-        </ul>
-        <a href="https://app.lessonslearnt.eu/signup" class="btn btn-primary" style="width:100%;justify-content:center;">Start free trial</a>
-      </div>
-      <div class="price-card">
-        <div class="price-name serif">Large</div>
-        <div class="price-amount">&euro;500<span>/month</span></div>
-        <div class="price-desc">Up to 250 students and 20 teachers.</div>
-        <ul class="price-features">
-          <li><span class="ck">&#10003;</span> Everything in Medium</li>
-          <li><span class="ck">&#10003;</span> Advanced cohort continuity profiles</li>
-          <li><span class="ck">&#10003;</span> Google Classroom integration</li>
-          <li><span class="ck">&#10003;</span> Dedicated onboarding</li>
-          <li><span class="ck">&#10003;</span> DPA &amp; procurement support</li>
-        </ul>
-        <a href="https://app.lessonslearnt.eu/signup" class="btn btn-secondary" style="width:100%;justify-content:center;">Start free trial</a>
-      </div>
+      
+      <div class="price-name serif">Small</div>
+      <div class="price-amount"><span class="price-monthly">&euro;100<span class="price-per">/month</span></span><span class="price-annual" style="display:none">&euro;960<span class="price-per">/year</span></span></div>
+      <div class="price-desc">Up to 30 students and 5 teachers.</div>
+      <ul class="price-features"><li><span class="ck">&#10003;</span> Core platform access</li><li><span class="ck">&#10003;</span> Mental health monitoring</li><li><span class="ck">&#10003;</span> Advanced analytics</li><li><span class="ck">&#10003;</span> Voice feedback features</li><li><span class="ck">&#10003;</span> Custom reporting</li><li><span class="ck">&#10003;</span> Email & priority support</li></ul>
+      <a href="https://app.lessonslearnt.eu/signup" class="btn btn-secondary" style="width:100%;justify-content:center;">Start free trial</a>
     </div>
-    <p style="text-align:center;color:var(--gray);margin-top:32px;font-size:.95rem;">Additional teachers &euro;20/month each &middot; Parent portal &euro;3/month per parent &middot; 20% off with annual billing</p>
+      <div class="price-card featured">
+      <div class="price-badge">Most popular</div>
+      <div class="price-name serif">Medium</div>
+      <div class="price-amount"><span class="price-monthly">&euro;250<span class="price-per">/month</span></span><span class="price-annual" style="display:none">&euro;2,400<span class="price-per">/year</span></span></div>
+      <div class="price-desc">Up to 100 students and 10 teachers.</div>
+      <ul class="price-features"><li><span class="ck">&#10003;</span> Core platform access</li><li><span class="ck">&#10003;</span> Mental health monitoring</li><li><span class="ck">&#10003;</span> Advanced analytics</li><li><span class="ck">&#10003;</span> Voice feedback features</li><li><span class="ck">&#10003;</span> Custom reporting</li><li><span class="ck">&#10003;</span> Email & priority support</li></ul>
+      <a href="https://app.lessonslearnt.eu/signup" class="btn btn-primary" style="width:100%;justify-content:center;">Start free trial</a>
+    </div>
+      <div class="price-card">
+      
+      <div class="price-name serif">Large</div>
+      <div class="price-amount"><span class="price-monthly">&euro;500<span class="price-per">/month</span></span><span class="price-annual" style="display:none">&euro;4,800<span class="price-per">/year</span></span></div>
+      <div class="price-desc">Up to 250 students and 20 teachers.</div>
+      <ul class="price-features"><li><span class="ck">&#10003;</span> Core platform access</li><li><span class="ck">&#10003;</span> Mental health monitoring</li><li><span class="ck">&#10003;</span> Advanced analytics</li><li><span class="ck">&#10003;</span> Voice feedback features</li><li><span class="ck">&#10003;</span> Custom reporting</li><li><span class="ck">&#10003;</span> Email & priority support</li></ul>
+      <a href="https://app.lessonslearnt.eu/signup" class="btn btn-secondary" style="width:100%;justify-content:center;">Start free trial</a>
+    </div>
+    </div>
+    <p style="text-align:center;color:var(--gray);margin-top:32px;font-size:.95rem;">Additional teachers &euro;20/month each &middot; Parent portal &euro;3/month per parent &middot; Annual billing saves 20%</p>
   </div>
 </section>
-
 <section class="section section-alt">
   <div class="container">
     <div class="section-title"><h2 class="serif">Pricing questions</h2></div>
-    <div class="faq-item"><div class="faq-q serif">Are students really free?</div><div class="faq-a">Yes — always. Students never pay to use LessonsLearnt. Pricing is based on school size, and every student in your school is included.</div></div>
-    <div class="faq-item"><div class="faq-q serif">What happens after the 30-day trial?</div><div class="faq-a">You choose a plan that fits your school size. No credit card is required to start the trial, and you won't be charged automatically.</div></div>
-    <div class="faq-item"><div class="faq-q serif">Can parents join?</div><div class="faq-a">Parents can optionally connect to the parent portal for &euro;3/month, giving them wellbeing summaries and direct messaging with teachers.</div></div>
-    <div class="faq-item"><div class="faq-q serif">Is annual billing cheaper?</div><div class="faq-a">Yes — annual billing saves 20% across all plans.</div></div>
+    <div class="faq-item-static"><div class="faq-q serif">Are students really free?</div><div class="faq-a">Yes — always. Students never pay to use LessonsLearnt. Pricing is based on school size, and every student is included.</div></div>
+    <div class="faq-item-static"><div class="faq-q serif">What happens after the 30-day trial?</div><div class="faq-a">You choose a plan that fits your school size. No credit card is required to start, and you won't be charged automatically.</div></div>
+    <div class="faq-item-static"><div class="faq-q serif">Can parents join?</div><div class="faq-a">Parents can optionally connect to the parent portal for &euro;3/month, giving them wellbeing summaries and direct messaging with teachers.</div></div>
+    <div class="faq-item-static"><div class="faq-q serif">Is annual billing cheaper?</div><div class="faq-a">Yes — annual billing saves 20% across all plans.</div></div>
   </div>
 </section>
-
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -376,7 +369,21 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
       <div>&#127473;&#127481; Kaunas, Lithuania</div>
     </div>
   </div>
-</footer>
-
+</footer><script>
+(function(){
+  var btn=document.getElementById('billingToggle');
+  var mLabel=document.querySelector('.toggle-monthly');
+  var aLabel=document.querySelector('.toggle-annual');
+  var annual=false;
+  btn.addEventListener('click',function(){
+    annual=!annual;
+    btn.classList.toggle('annual',annual);
+    document.querySelectorAll('.price-monthly').forEach(function(e){e.style.display=annual?'none':'inline'});
+    document.querySelectorAll('.price-annual').forEach(function(e){e.style.display=annual?'inline':'none'});
+    mLabel.classList.toggle('active',!annual);
+    aLabel.classList.toggle('active',annual);
+  });
+})();
+</script>
 </body>
 </html>

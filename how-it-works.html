@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How It Works – LessonsLearnt Student Wellbeing Platform</title>
-<meta name="description" content="How LessonsLearnt works for every role — school leaders, teachers, counsellors, and students. Step-by-step guides to student wellbeing and lesson feedback.">
+<meta name="description" content="See how LessonsLearnt works — a data architecture that compounds every term. The flywheel, year-on-year value, and role-by-role journeys for European schools.">
 <link rel="canonical" href="https://lessonslearnt.eu/how-it-works">
 <meta name="theme-color" content="#1a9e72">
 <meta property="og:title" content="About LessonsLearnt – Student Wellbeing Platform from Kaunas">
@@ -252,18 +252,51 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
   .comp-table th,.comp-table td{padding:10px 8px}
 }
 
-.hiw-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:0 0 44px}
+.fly-wrap{display:flex;align-items:flex-start;justify-content:center;gap:4px;flex-wrap:wrap;max-width:920px;margin:0 auto 8px}
+.fly-step{flex:0 1 auto;text-align:center;position:relative;cursor:pointer;padding:6px}
+.fly-num{width:52px;height:52px;margin:0 auto 10px;background:var(--teal);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.2rem;transition:.15s}
+.fly-step:hover .fly-num,.fly-step.open .fly-num{transform:scale(1.08);box-shadow:0 4px 14px rgba(26,158,114,.4)}
+.fly-label{font-weight:600;font-size:.9rem;color:var(--ink);max-width:90px;margin:0 auto;line-height:1.2}
+.fly-detail{position:absolute;bottom:calc(100% + 12px);left:50%;transform:translateX(-50%);width:240px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 12px 30px rgba(0,0,0,.12);opacity:0;visibility:hidden;transition:.18s;z-index:10;text-align:center}
+.fly-detail::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#fff}
+.fly-step:hover .fly-detail,.fly-step.open .fly-detail{opacity:1;visibility:visible}
+.fly-detail h4{font-family:var(--serif);font-size:1.05rem;margin-bottom:8px;line-height:1.2;color:var(--teal-dark)}
+.fly-detail p{font-size:.84rem;color:var(--gray);line-height:1.5}
+.fly-arrow{color:var(--teal);font-size:1.4rem;padding-top:14px;flex-shrink:0}
+.fly-hint{text-align:center;font-style:italic;font-size:.82rem;color:var(--gray);margin-top:18px}
+.year-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:980px;margin:0 auto}
+.year-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 26px}
+.year-badge{display:inline-block;background:var(--teal);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 14px;border-radius:100px;margin-bottom:16px}
+.year-card h3{font-size:1.35rem;margin-bottom:12px}
+.year-card p{color:var(--gray);font-size:.92rem;line-height:1.6}
+.comp-table2{width:100%;border-collapse:collapse;max-width:900px;margin:0 auto}
+.comp-table2 th{padding:14px 18px;text-align:left;font-weight:600;font-size:.9rem}
+.comp-table2 th:first-child{color:var(--gray)}
+.comp-table2 th:last-child{color:var(--teal-dark);background:var(--teal-light);border-radius:8px 8px 0 0}
+.comp-table2 td{padding:13px 18px;border-bottom:1px solid var(--line);font-size:.9rem;vertical-align:top}
+.comp-before{color:var(--gray)}
+.comp-after{color:#2a4a40;background:rgba(26,158,114,.05);font-weight:500}
+.comp-after::before{content:"\2713  ";color:var(--teal);font-weight:700}
+.hiw-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:0 0 40px}
 .hiw-tab{padding:10px 24px;border-radius:100px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:.92rem;cursor:pointer;font-family:var(--sans);transition:.15s}
 .hiw-tab.active{background:var(--teal);color:#fff;border-color:var(--teal)}
 .hiw-panel{display:none;max-width:760px;margin:0 auto}
 .hiw-panel.active{display:block}
 .hiw-steps{position:relative}
 .hiw-steps::before{content:"";position:absolute;left:21px;top:24px;bottom:24px;width:2px;background:var(--teal-light)}
-.hiw-step{display:flex;gap:22px;margin-bottom:20px;position:relative}
+.hiw-step{display:flex;gap:22px;margin-bottom:18px;position:relative}
 .hiw-step-num{width:44px;height:44px;flex-shrink:0;background:var(--teal);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;z-index:1}
-.hiw-step-body{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;flex:1}
-.hiw-step-body h4{font-family:var(--serif);font-size:1.25rem;margin-bottom:6px}
-.hiw-step-body p{color:var(--gray);font-size:.92rem;line-height:1.55}
+.hiw-step-body{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;flex:1}
+.hiw-step-body h4{font-family:var(--serif);font-size:1.2rem;margin-bottom:5px}
+.hiw-step-body p{color:var(--gray);font-size:.9rem;line-height:1.5}
+@media(max-width:820px){.fly-arrow{display:none}.fly-step{max-width:none;min-width:130px}.year-grid{grid-template-columns:1fr}.comp-table2{font-size:.82rem}}
+
+.card-icon svg{width:24px;height:24px}
+.fw-num svg,.fly-num svg,.hiw-step-num svg{width:22px;height:22px;color:#fff}
+.cmp-icon svg,.cs-stat svg{width:22px;height:22px}
+.comp-badge svg,.trust-item svg{width:18px;height:18px;vertical-align:middle}
+.fly-detail svg{width:26px;height:26px;color:var(--teal);margin:0 auto 6px}
+svg.lucide{display:inline-block;vertical-align:middle}
 </style>
 </head>
 <body>
@@ -290,103 +323,70 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
 <section class="page-hero">
   <div class="container">
     <span class="eyebrow">How it works</span>
-    <h1 class="serif">How our platform works</h1>
-    <p class="lead">Discover how each role contributes to student wellbeing and academic success. Select a role to see the step-by-step journey.</p>
+    <h1 class="serif">Not a survey tool. <em>A data architecture.</em></h1>
+    <p class="lead">Every student interaction automatically becomes insight. Every insight becomes action. Every action compounds in value — every single term your school uses LessonsLearnt.</p>
   </div>
 </section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-title"><span class="eyebrow">The data architecture</span><h2 class="serif">What happens to every student interaction</h2><p class="lead">Five things happen automatically — every single time a student checks in.</p></div>
+    <div class="fly-wrap"><div class="fly-step">
+  <div class="fly-num">1</div>
+  <div class="fly-label">Data enters</div>
+  <div class="fly-detail"><h4>Raw data enters the flywheel</h4><p>Every lesson feedback, mood check-in, and student interaction becomes a structured data point — stored, timestamped, and ready to be analysed.</p></div>
+</div><div class="fly-arrow">&#8594;</div><div class="fly-step">
+  <div class="fly-num">2</div>
+  <div class="fly-label">Patterns emerge</div>
+  <div class="fly-detail"><h4>Patterns emerge across time</h4><p>The AI doesn't react to single responses — it builds a model of each student and class over weeks and terms, so signals become increasingly accurate the longer your school uses it.</p></div>
+</div><div class="fly-arrow">&#8594;</div><div class="fly-step">
+  <div class="fly-num">3</div>
+  <div class="fly-label">Action triggered</div>
+  <div class="fly-detail"><h4>Action is triggered automatically</h4><p>The right insight reaches the right person with no manual triage — counsellors, teachers, and leaders each get exactly what they need to act, when they need it.</p></div>
+</div><div class="fly-arrow">&#8594;</div><div class="fly-step">
+  <div class="fly-num">4</div>
+  <div class="fly-label">Outcomes recorded</div>
+  <div class="fly-detail"><h4>Outcomes feed back into the model</h4><p>Every intervention and its outcome is logged — so the system learns what works in your school specifically, not generic benchmarks.</p></div>
+</div><div class="fly-arrow">&#8594;</div><div class="fly-step">
+  <div class="fly-num">5</div>
+  <div class="fly-label">Flywheel compounds</div>
+  <div class="fly-detail"><h4>The flywheel compounds every term</h4><p>Each completed loop makes the next one smarter — your school's data becomes a proprietary asset that grows in value every single term and can never be replicated by a new tool.</p></div>
+</div></div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
-    <div class="hiw-tabs"><button class="hiw-tab active" data-role="schoolAdmin">School leaders</button><button class="hiw-tab" data-role="teacher">Teachers</button><button class="hiw-tab" data-role="doctor">Counsellors</button><button class="hiw-tab" data-role="student">Students</button></div>
-    <div class="hiw-panel active" data-role="schoolAdmin"><div class="hiw-steps"><div class="hiw-step">
-  <div class="hiw-step-num">1</div>
-  <div class="hiw-step-body"><h4>Sign Up Your School</h4><p>Create your school's account in minutes with our simple onboarding process.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">2</div>
-  <div class="hiw-step-body"><h4>Invite Your Team</h4><p>Add teachers and mental health professionals to your school's platform.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">3</div>
-  <div class="hiw-step-body"><h4>Configure Classes</h4><p>Set up grades, subjects, and schedules to match your school structure.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">4</div>
-  <div class="hiw-step-body"><h4>Monitor Dashboard</h4><p>View school-wide analytics, trends, and insights in real-time.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">5</div>
-  <div class="hiw-step-body"><h4>Mental Health Alerts</h4><p>Get notified when students need support, enabling early intervention.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">6</div>
-  <div class="hiw-step-body"><h4>Manage Subscription</h4><p>Control billing, features, and user access from your admin panel.</p></div>
-</div></div></div><div class="hiw-panel" data-role="teacher"><div class="hiw-steps"><div class="hiw-step">
-  <div class="hiw-step-num">1</div>
-  <div class="hiw-step-body"><h4>Accept Invitation</h4><p>Join your school's platform through a secure invitation from your admin.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">2</div>
-  <div class="hiw-step-body"><h4>Create Class Schedules</h4><p>Add your classes, subjects, and lesson topics for organized feedback collection.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">3</div>
-  <div class="hiw-step-body"><h4>Invite Students</h4><p>Generate secure student access credentials for your classes.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">4</div>
-  <div class="hiw-step-body"><h4>Collect Feedback</h4><p>Students submit feedback after each lesson, sharing their understanding and emotions.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">5</div>
-  <div class="hiw-step-body"><h4>Review Insights</h4><p>See class trends, understanding levels, and emotional states at a glance.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">6</div>
-  <div class="hiw-step-body"><h4>Identify Concerns</h4><p>Get alerts for students who need extra academic or emotional support.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">7</div>
-  <div class="hiw-step-body"><h4>Collaborate</h4><p>Share insights with school mental health professionals and administrators.</p></div>
-</div></div></div><div class="hiw-panel" data-role="doctor"><div class="hiw-steps"><div class="hiw-step">
-  <div class="hiw-step-num">1</div>
-  <div class="hiw-step-body"><h4>Join School Team</h4><p>Accept your school's invitation to join as a mental health professional.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">2</div>
-  <div class="hiw-step-body"><h4>Access Mental Health Data</h4><p>View aggregated student wellness trends and emotional patterns.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">3</div>
-  <div class="hiw-step-body"><h4>Receive Alerts</h4><p>Get notified when students express emotional concerns or distress.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">4</div>
-  <div class="hiw-step-body"><h4>Review Weekly Summaries</h4><p>Read anonymous student emotional check-ins submitted weekly.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">5</div>
-  <div class="hiw-step-body"><h4>Provide Support</h4><p>Reach out to students who need help through secure messaging.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">6</div>
-  <div class="hiw-step-body"><h4>Track Patterns</h4><p>Monitor school-wide mental health trends and intervention outcomes.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">7</div>
-  <div class="hiw-step-body"><h4>Collaborate with Staff</h4><p>Work with teachers and admins for holistic student support.</p></div>
-</div></div></div><div class="hiw-panel" data-role="student"><div class="hiw-steps"><div class="hiw-step">
-  <div class="hiw-step-num">1</div>
-  <div class="hiw-step-body"><h4>Secure Login</h4><p>Access the platform using credentials provided by your teacher.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">2</div>
-  <div class="hiw-step-body"><h4>View Schedule</h4><p>See your upcoming classes, subjects, and lesson topics.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">3</div>
-  <div class="hiw-step-body"><h4>Submit Feedback</h4><p>Share honest thoughts after each lesson with optional anonymity.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">4</div>
-  <div class="hiw-step-body"><h4>Weekly Check-In</h4><p>Express emotional and academic concerns in a private, safe space.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">5</div>
-  <div class="hiw-step-body"><h4>Access Support</h4><p>Connect with school mental health professionals when you need help.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">6</div>
-  <div class="hiw-step-body"><h4>Track Progress</h4><p>View your feedback history and personal insights over time.</p></div>
-</div><div class="hiw-step">
-  <div class="hiw-step-num">7</div>
-  <div class="hiw-step-body"><h4>Privacy Protected</h4><p>All data is encrypted, anonymous when chosen, and GDPR compliant.</p></div>
-</div></div></div>
+    <div class="section-title"><span class="eyebrow">Why schools stay</span><h2 class="serif">The longer you use it, the more valuable it becomes</h2><p class="lead">Most platforms give you the same value on day one as day 500. LessonsLearnt is different.</p></div>
+    <div class="year-grid"><div class="year-card"><div class="year-badge">Year 1</div><h3 class="serif">Your school's baseline is established</h3><p>In the first term, LessonsLearnt builds a picture of your school — which classes struggle with which subjects, which students show early wellbeing signals, what your strongest teaching approaches look like. By the end of year one, you have a searchable record of what works.</p></div><div class="year-card"><div class="year-badge">Year 2</div><h3 class="serif">The AI knows your school</h3><p>In year two, the AI is no longer working from generic models — it's working from your school's specific patterns. Alerts become more accurate. Lesson insights become more relevant. The platform starts anticipating problems rather than just detecting them.</p></div><div class="year-card"><div class="year-badge">Year 3</div><h3 class="serif">A competitive moat no other tool can match</h3><p>No competitor can give a new school three years of mood patterns, benchmark history, and lesson intelligence on day one. By year three, LessonsLearnt is not just a tool your school uses — it's institutional knowledge your school owns.</p></div></div>
   </div>
 </section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-title"><h2 class="serif">Before LessonsLearnt. And after.</h2></div>
+    <table class="comp-table2">
+      <thead><tr><th>How schools manage this today</th><th>With LessonsLearnt</th></tr></thead>
+      <tbody><tr><td class="comp-before">Wellbeing surveys that repeat the same questions every month</td><td class="comp-after">Live wellbeing system — updated every night</td></tr><tr><td class="comp-before">Finding out a student is struggling when it's already a crisis</td><td class="comp-after">Monday morning digest with at-risk students and reasons</td></tr><tr><td class="comp-before">Manual spreadsheets linking academic and emotional data</td><td class="comp-after">Automated data model connecting wellbeing, academic and behaviour</td></tr><tr><td class="comp-before">Reinventing interventions with no track record to lean on</td><td class="comp-after">Annual report auto-generated on 1st July — your data tells the story</td></tr><tr><td class="comp-before">5 separate platforms, 5 separate costs, 5 separate training programmes</td><td class="comp-after">Cohort synthesis profiles carry institutional knowledge forward</td></tr><tr><td class="comp-before">No way to know if wellbeing initiatives are actually working</td><td class="comp-after">One platform. Five roles. One data architecture.</td></tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title"><span class="eyebrow">Your journey</span><h2 class="serif">How our platform works for every role</h2><p class="lead">Select a role to see the step-by-step journey.</p></div>
+    <div class="hiw-tabs"><button class="hiw-tab active" data-role="schoolAdmin">School leaders</button><button class="hiw-tab" data-role="teacher">Teachers</button><button class="hiw-tab" data-role="doctor">Counsellors</button><button class="hiw-tab" data-role="student">Students</button></div>
+    <div class="hiw-panel active" data-role="schoolAdmin"><div class="hiw-steps"><div class="hiw-step"><div class="hiw-step-num">1</div><div class="hiw-step-body"><h4>Sign Up Your School</h4><p>Create your school's account in minutes with our simple onboarding process.</p></div></div><div class="hiw-step"><div class="hiw-step-num">2</div><div class="hiw-step-body"><h4>Invite Your Team</h4><p>Add teachers and mental health professionals to your school's platform.</p></div></div><div class="hiw-step"><div class="hiw-step-num">3</div><div class="hiw-step-body"><h4>Configure Classes</h4><p>Set up grades, subjects, and schedules to match your school structure.</p></div></div><div class="hiw-step"><div class="hiw-step-num">4</div><div class="hiw-step-body"><h4>Monitor Dashboard</h4><p>View school-wide analytics, trends, and insights in real-time.</p></div></div><div class="hiw-step"><div class="hiw-step-num">5</div><div class="hiw-step-body"><h4>Mental Health Alerts</h4><p>Get notified when students need support, enabling early intervention.</p></div></div><div class="hiw-step"><div class="hiw-step-num">6</div><div class="hiw-step-body"><h4>Manage Subscription</h4><p>Control billing, features, and user access from your admin panel.</p></div></div></div></div><div class="hiw-panel" data-role="teacher"><div class="hiw-steps"><div class="hiw-step"><div class="hiw-step-num">1</div><div class="hiw-step-body"><h4>Accept Invitation</h4><p>Join your school's platform through a secure invitation from your admin.</p></div></div><div class="hiw-step"><div class="hiw-step-num">2</div><div class="hiw-step-body"><h4>Create Class Schedules</h4><p>Add your classes, subjects, and lesson topics for organized feedback collection.</p></div></div><div class="hiw-step"><div class="hiw-step-num">3</div><div class="hiw-step-body"><h4>Invite Students</h4><p>Generate secure student access credentials for your classes.</p></div></div><div class="hiw-step"><div class="hiw-step-num">4</div><div class="hiw-step-body"><h4>Collect Feedback</h4><p>Students submit feedback after each lesson, sharing their understanding and emotions.</p></div></div><div class="hiw-step"><div class="hiw-step-num">5</div><div class="hiw-step-body"><h4>Review Insights</h4><p>See class trends, understanding levels, and emotional states at a glance.</p></div></div><div class="hiw-step"><div class="hiw-step-num">6</div><div class="hiw-step-body"><h4>Identify Concerns</h4><p>Get alerts for students who need extra academic or emotional support.</p></div></div><div class="hiw-step"><div class="hiw-step-num">7</div><div class="hiw-step-body"><h4>Collaborate</h4><p>Share insights with school mental health professionals and administrators.</p></div></div></div></div><div class="hiw-panel" data-role="doctor"><div class="hiw-steps"><div class="hiw-step"><div class="hiw-step-num">1</div><div class="hiw-step-body"><h4>Join School Team</h4><p>Accept your school's invitation to join as a mental health professional.</p></div></div><div class="hiw-step"><div class="hiw-step-num">2</div><div class="hiw-step-body"><h4>Access Mental Health Data</h4><p>View aggregated student wellness trends and emotional patterns.</p></div></div><div class="hiw-step"><div class="hiw-step-num">3</div><div class="hiw-step-body"><h4>Receive Alerts</h4><p>Get notified when students express emotional concerns or distress.</p></div></div><div class="hiw-step"><div class="hiw-step-num">4</div><div class="hiw-step-body"><h4>Review Weekly Summaries</h4><p>Read anonymous student emotional check-ins submitted weekly.</p></div></div><div class="hiw-step"><div class="hiw-step-num">5</div><div class="hiw-step-body"><h4>Provide Support</h4><p>Reach out to students who need help through secure messaging.</p></div></div><div class="hiw-step"><div class="hiw-step-num">6</div><div class="hiw-step-body"><h4>Track Patterns</h4><p>Monitor school-wide mental health trends and intervention outcomes.</p></div></div><div class="hiw-step"><div class="hiw-step-num">7</div><div class="hiw-step-body"><h4>Collaborate with Staff</h4><p>Work with teachers and admins for holistic student support.</p></div></div></div></div><div class="hiw-panel" data-role="student"><div class="hiw-steps"><div class="hiw-step"><div class="hiw-step-num">1</div><div class="hiw-step-body"><h4>Secure Login</h4><p>Access the platform using credentials provided by your teacher.</p></div></div><div class="hiw-step"><div class="hiw-step-num">2</div><div class="hiw-step-body"><h4>View Schedule</h4><p>See your upcoming classes, subjects, and lesson topics.</p></div></div><div class="hiw-step"><div class="hiw-step-num">3</div><div class="hiw-step-body"><h4>Submit Feedback</h4><p>Share honest thoughts after each lesson with optional anonymity.</p></div></div><div class="hiw-step"><div class="hiw-step-num">4</div><div class="hiw-step-body"><h4>Weekly Check-In</h4><p>Express emotional and academic concerns in a private, safe space.</p></div></div><div class="hiw-step"><div class="hiw-step-num">5</div><div class="hiw-step-body"><h4>Access Support</h4><p>Connect with school mental health professionals when you need help.</p></div></div><div class="hiw-step"><div class="hiw-step-num">6</div><div class="hiw-step-body"><h4>Track Progress</h4><p>View your feedback history and personal insights over time.</p></div></div><div class="hiw-step"><div class="hiw-step-num">7</div><div class="hiw-step-body"><h4>Privacy Protected</h4><p>All data is encrypted, anonymous when chosen, and GDPR compliant.</p></div></div></div></div>
+  </div>
+</section>
+
 <section class="section section-alt">
   <div class="container">
     <div class="section-title"><span class="eyebrow">Platform features</span><h2 class="serif">Everything you need for student wellbeing and academic success</h2></div>
-    <div class="grid-3"><div class="card"><div class="card-icon">&#129504;</div><h3>AI-Powered Insights</h3><p>Identify struggling students early with intelligent pattern recognition.</p></div><div class="card"><div class="card-icon">&#128202;</div><h3>Real-Time Analytics</h3><p>Dashboard insights for all roles updated in real-time.</p></div><div class="card"><div class="card-icon">&#128172;</div><h3>Anonymous Feedback</h3><p>Students share honest thoughts with optional anonymity.</p></div><div class="card"><div class="card-icon">&#128274;</div><h3>GDPR Compliant</h3><p>EU data protection standards with enterprise-grade encryption.</p></div><div class="card"><div class="card-icon">&#128149;</div><h3>Mental Health Support</h3><p>Integrated wellness tracking and professional support access.</p></div><div class="card"><div class="card-icon">&#128241;</div><h3>Mobile Friendly</h3><p>Access anywhere, anytime on any device.</p></div></div>
+    <div class="grid-3"><div class="card"><div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg></div><h3>AI-Powered Insights</h3><p>Identify struggling students early with intelligent pattern recognition.</p></div><div class="card"><div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg></div><h3>Real-Time Analytics</h3><p>Dashboard insights for all roles updated in real-time.</p></div><div class="card"><div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Anonymous Feedback</h3><p>Students share honest thoughts with optional anonymity.</p></div><div class="card"><div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>GDPR Compliant</h3><p>EU data protection standards with enterprise-grade encryption.</p></div><div class="card"><div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h3>Mental Health Support</h3><p>Integrated wellness tracking and professional support access.</p></div><div class="card"><div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></div><h3>Mobile Friendly</h3><p>Access anywhere, anytime on any device.</p></div></div>
   </div>
 </section>
+
 <section class="section">
   <div class="container">
     <div class="inline-cta">
@@ -439,6 +439,15 @@ document.querySelectorAll('.hiw-tab').forEach(function(tab){
     document.querySelectorAll('.hiw-panel').forEach(function(p){p.classList.remove('active')});
     tab.classList.add('active');
     document.querySelector('.hiw-panel[data-role="'+r+'"]').classList.add('active');
+  });
+});
+</script>
+<script>
+document.querySelectorAll('.fly-step').forEach(function(s){
+  s.addEventListener('click',function(){
+    var wasOpen=s.classList.contains('open');
+    document.querySelectorAll('.fly-step').forEach(function(x){x.classList.remove('open')});
+    if(!wasOpen)s.classList.add('open');
   });
 });
 </script>

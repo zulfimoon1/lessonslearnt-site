@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,7 +34,7 @@
   --ink:#1a1a18; --gray:#6b6a64; --line:#e4e2da; --orange:#e8833a;
   --max:1140px; --r:12px; --r-lg:18px;
   --serif:'Instrument Serif',Georgia,serif;
-  --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -201,6 +201,13 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
   .footer-grid{grid-template-columns:1fr}
   .compliance-inner,.trust-inner{justify-content:center;text-align:center}
 }
+
+.card-icon svg{width:24px;height:24px}
+.fw-num svg,.fly-num svg,.hiw-step-num svg{width:22px;height:22px;color:#fff}
+.cmp-icon svg,.cs-stat svg{width:22px;height:22px}
+.comp-badge svg,.trust-item svg{width:18px;height:18px;vertical-align:middle}
+.fly-detail svg{width:26px;height:26px;color:var(--teal);margin:0 auto 6px}
+svg.lucide{display:inline-block;vertical-align:middle}
 </style>
 </head>
 <body>
@@ -296,9 +303,9 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
     <span class="eyebrow">The process</span>
     <h2 class="serif">Live in three minutes. Here's how it works.</h2>
     <div class="process-steps">
-      <div><div class="ps-icon">&#128101;</div><div class="ps-label">Sign up and invite your school</div></div>
-      <div><div class="ps-icon">&#128172;</div><div class="ps-label">Students check in after every lesson</div></div>
-      <div><div class="ps-icon">&#128202;</div><div class="ps-label">Insights reach the right people</div></div>
+      <div><div class="ps-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="ps-label">Sign up and invite your school</div></div>
+      <div><div class="ps-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="ps-label">Students check in after every lesson</div></div>
+      <div><div class="ps-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg></div><div class="ps-label">Insights reach the right people</div></div>
     </div>
   </div>
 </section>
@@ -394,7 +401,7 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
 <section class="compliance">
   <div class="container compliance-inner">
     <div class="comp-badges">
-      <div class="comp-badge">&#128274; GDPR compliant</div>
+      <div class="comp-badge"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> GDPR compliant</div>
       <div class="comp-badge">&#127466;&#127482; EU-resident data</div>
       <div class="comp-badge">&#10003; ISO 42001 aligned</div>
     </div>
@@ -417,9 +424,9 @@ h2.serif{font-size:clamp(2rem,4vw,2.9rem)}
   <div class="container trust-inner">
     <div class="trust-label">SOC 2 Type II</div>
     <div class="trust-items">
-      <div class="trust-item">&#128274; SOC 2 aligned</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> SOC 2 aligned</div>
       <div class="trust-item">&#9881; ISO/IEC 42001 aligned</div>
-      <div class="trust-item">&#128737; NIS2 aligned</div>
+      <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> NIS2 aligned</div>
     </div>
   </div>
 </section>
